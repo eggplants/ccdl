@@ -86,7 +86,7 @@ def get_image(driver: webdriver.Chrome, url):
                 xSplitCount = math.floor(img0.width / block_size)
                 ySplitCount = math.floor(img0.height / block_size)
                 img0.save(
-                    file_path+"/source/{}.jpg".format(item["page_number"]))
+                    file_path+"/source/{}.jpg".format(item["page_number"]), quality=100)
                 img_copy = copy.deepcopy(img0)
                 count = 0
                 for i in range(xSplitCount):
@@ -99,7 +99,7 @@ def get_image(driver: webdriver.Chrome, url):
                         )
                         count += 1
                 img_copy.save(
-                    file_path+"/target/{}.jpg".format(item["page_number"]))
+                    file_path+"/target/{}.jpg".format(item["page_number"]), quality=100)
                 show_bar.show(page_count)
                 page_count += 1
         print('下載完成！\n')

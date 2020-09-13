@@ -165,7 +165,7 @@ def get_image(driver: webdriver.Chrome, url, file_path, site_model: int):
 
                     content_data = get_file_content(driver, img_blob)
                     image_1of3 = Image.open(BytesIO(content_data))
-                    image_1of3.save('{}/tmp/{}-{}.jpeg'.format(file_path, i, j))
+                    image_1of3.save('{}/tmp/{}-{}.jpeg'.format(file_path, i, j), quality=100)
                     img_c3.append(image_1of3)
                 img_np = []
                 for x in img_c3:
@@ -184,7 +184,7 @@ def get_image(driver: webdriver.Chrome, url, file_path, site_model: int):
                     img_c3[2],
                     (0, img_c3[0].size[1] + img_c3[1].size[1] - ij[0] - ij[1])
                 )
-                img3t1.save('{}/{}.jpeg'.format(file_path, i))
+                img3t1.save('{}/{}.jpeg'.format(file_path, i), quality=100)
                 show_bar.show(page_count)
                 page_count += 1
             if c_page == t_page:

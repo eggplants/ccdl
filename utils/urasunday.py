@@ -58,7 +58,7 @@ def get_image(driver: webdriver.Chrome, url: str):
                 img = Image.open(BytesIO(content))
                 name_img = file_path + "/" + \
                     re.search(r'([0-9]*)\.webp', x['src']).group(1)+'.jpg'
-                img.save(name_img, 'JPEG')
+                img.save(name_img, quality=100)
                 show_bar.show(page_count)
                 page_count += 1
         print('下載完成！\n')

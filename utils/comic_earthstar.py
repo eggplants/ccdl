@@ -188,8 +188,8 @@ def get_image(driver, url):
             for e in arrayP:
                 drawImage(img, img_t, e['destX'], e['destY'], e['width'], e['height'],
                           e['srcX'], e['srcY'])
-            img.save(file_path + '/source/' + str(x['index']) + '.jpg')
-            img_t.save(file_path + '/target/' + str(x['index']) + '.jpg')
+            img.save(file_path + '/source/' + str(x['index']) + '.jpg', quality=100)
+            img_t.save(file_path + '/target/' + str(x['index']) + '.jpg', quality=100)
             show_bar.show(page_count)
             page_count += 1
         print("下載完成！\n")

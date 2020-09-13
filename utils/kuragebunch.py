@@ -98,10 +98,10 @@ def get_image(driver: webdriver.Chrome, url: str):
                 continue
             content = requests.get(pages[i]['src'], headers=headers).content
             img0 = Image.open(BytesIO(content))
-            img0.save(file_path+"/source/{}.jpg".format(page_count))
+            img0.save(file_path+"/source/{}.jpg".format(page_count), quality=100)
             proc = proc_img_co(img0.width, img0.height)
             proc.n21(img0=img0).save(
-                file_path+"/target/{}.jpg".format(page_count))
+                file_path+"/target/{}.jpg".format(page_count), quality=100)
             show_bar.show(page_count)
             if "contentEnd" in pages[i]:
                 print('下載完成！\n')
