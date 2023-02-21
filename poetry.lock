@@ -1285,14 +1285,14 @@ wsproto = ">=0.14"
 
 [[package]]
 name = "types-pillow"
-version = "9.4.0.12"
+version = "9.4.0.14"
 description = "Typing stubs for Pillow"
 category = "dev"
 optional = false
 python-versions = "*"
 files = [
-    {file = "types-Pillow-9.4.0.12.tar.gz", hash = "sha256:e0074149d5f06d3593c118acc83e353f8542bcc73576ffefb6568eaab5671348"},
-    {file = "types_Pillow-9.4.0.12-py3-none-any.whl", hash = "sha256:b4aaa86b43f53e4d552d2c0381068015121e8990b0369df7c5e3b36fa6266984"},
+    {file = "types-Pillow-9.4.0.14.tar.gz", hash = "sha256:635fe7b878588a6212a4559eba4d45286c467ba6a4d0ee4a449f69c0df1cf4fa"},
+    {file = "types_Pillow-9.4.0.14-py3-none-any.whl", hash = "sha256:10f3c90e3ede165059b40d02ac37825ee36661804ae132439dc4647981e8bfa0"},
 ]
 
 [[package]]
